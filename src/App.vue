@@ -1,17 +1,29 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Combobox name='teste'></Combobox>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Combobox from './components/Combobox.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    Combobox
+  },
+  data() {
+    return {
+      exibePrimeiro: false,
+    }
+  },
+  methods: {
+    toggle() {
+      this.exibePrimeiro = !this.exibePrimeiro;
+    }
   }
 }
 </script>
