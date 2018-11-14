@@ -69,6 +69,7 @@ export default {
             .then((response) => {
                 this.arr.push({'id': response.data.id, 'nome': response.data.value});
                 console.log(response);
+                
                 this.carregando = false;
             })
             .catch((error) => {
